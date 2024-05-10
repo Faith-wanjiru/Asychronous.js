@@ -52,6 +52,10 @@ async function performTask(){
         console.log('task not successful')
     }
 }
+getPerformTask();
+
+
+
 
 
 // Retry Logic:
@@ -69,8 +73,24 @@ async function performTask(){
 // Logs whether the task succeeded or failed after all attempts.
 
 function unstableTask(taskName,failureProbability){
-return new Promise((resolve, reject) => {
-    if(number > )
-})
-
+    return newPromise((resolve,reject)=>{
+        if(number > failureProbability){
+            resolve('sucessful')
+        }else{
+            if(number<= failureProbability){
+                reject('not successful')
+            }
+        }
+    })
 }
+
+async function executeWithRetry(taskName, retries, failureProbability){
+    try{
+        console.log('attempt unstableTask upto seven times')
+        await newPromise;
+    }
+    catch{
+        console.log('unstableTask unsuccessful')
+    }
+}
+unstableTask();
